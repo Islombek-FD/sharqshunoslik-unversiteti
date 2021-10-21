@@ -1,0 +1,143 @@
+// Aside Styles
+.main {
+    position: fixed;
+}
+
+.site__info {
+    width: calc(100% - 40px);
+    height: calc(100vh - 60px);
+    overflow: auto;
+    @extend %transition;
+    transform: translateX(40px);
+}
+
+.par {
+    padding: 10px;
+    text-align: justify;
+}
+
+.site__info--fluid {
+    width: calc(100vw - 250px);
+    transform: translateX(250px);
+}
+
+.site__menu {
+    position: absolute;
+    
+    display: flex;
+    z-index: 10;
+    width: 40px;
+    height: calc(100vh - 60px);
+    background-color:#FFF;
+    transform-origin: left;
+    @extend %transition;
+}
+
+.site__menu--open {
+    width: 250px;
+}
+
+.site__menu--open .menu {
+    transform: scaleX(1);
+}
+
+.menu {
+    width: 210px;
+    @extend %reset-list;
+    background-color: #FFF;
+    overflow: auto;
+    @extend %transition;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.menu__item {
+    position: telative;
+}
+
+.menu__item:not(:first-child) {
+    border-top: 1px solid $dark-color;
+}
+
+.menu__link {
+    display: block;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    color: $white-color;
+    background-color: #636B77;
+    text-decoration: none;
+    @extend %transition;
+
+    &:hover {
+        background-color: #39B5E5;
+        color: $white-color;
+    }
+}
+
+// Sub Menu Styles
+.sub-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    transform-origin: center top;
+    transform: scaleY(0);
+    @extend %reset-list;
+    @extend %transition;
+}
+
+.sub-menu__item:not(:first-child) {
+    border-top: 1px solid $dark-color;
+}
+
+.sub-menu__link {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: $dark-color;
+    @extend %transition;
+    opacity: .6;
+
+    &:hover {
+        opacity: 1;
+        color: $dark-color;
+    }
+}
+
+// Aside Menu Open Styles
+.menu__link--open ~ .sub-menu {
+    position: relative;
+    transform: scaleY(1);
+}
+
+// Menu Icons Styles
+.menu__icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: calc(100vh - 60px);
+    @extend %reset-list;
+    background-color: $dark-color;
+}
+
+.menu__icon {
+    font-size: 20px;
+    color: #888;
+}
+
+.hamburger__icon {
+    color: $white-color;
+    cursor: pointer;
+    font-size: 28px;
+    @extend %transition;
+
+    &:hover {
+        color: steelblue;
+    }
+}

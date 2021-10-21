@@ -1,0 +1,20 @@
+// Header styles
+
+.header {
+    padding: 10px 0;
+}
+
+.search__input {
+    width: 400px;
+    padding: 5px 10px;
+    border: 1pz solid #aaa;
+
+    &:focus {
+        outline: 2px solid turquoise;
+    }
+}
+
+.search__btn {
+    padding: 5px 10px;
+    border: 1px solid transparent;
+}

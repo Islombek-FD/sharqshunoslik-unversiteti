@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+.menu, .sub-menu, .menu__icons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site__info, .site__menu, .menu, .menu__link, .sub-menu, .sub-menu__link, .hamburger__icon {
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+.header {
+  padding: 10px 0;
+}
+
+.search__input {
+  width: 400px;
+  padding: 5px 10px;
+  border: 1pz solid #aaa;
+}
+
+.search__input:focus {
+  outline: 2px solid turquoise;
+}
+
+.search__btn {
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+
+.main {
+  position: fixed;
+}
+
+.site__info {
+  width: calc(100% - 40px);
+  height: calc(100vh - 60px);
+  overflow: auto;
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+}
+
+.par {
+  padding: 10px;
+  text-align: justify;
+}
+
+.site__info--fluid {
+  width: calc(100vw - 250px);
+  -webkit-transform: translateX(250px);
+          transform: translateX(250px);
+}
+
+.site__menu {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  width: 40px;
+  height: calc(100vh - 60px);
+  background-color: #FFF;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.site__menu--open {
+  width: 250px;
+}
+
+.site__menu--open .menu {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.menu {
+  width: 210px;
+  background-color: #FFF;
+  overflow: auto;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.menu__item {
+  position: telative;
+}
+
+.menu__item:not(:first-child) {
+  border-top: 1px solid #1A0A03;
+}
+
+.menu__link {
+  display: block;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 16px;
+  color: #FFF;
+  background-color: #636B77;
+  text-decoration: none;
+}
+
+.menu__link:hover {
+  background-color: #39B5E5;
+  color: #FFF;
+}
+
+.sub-menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  -webkit-transform-origin: center top;
+          transform-origin: center top;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+
+.sub-menu__item:not(:first-child) {
+  border-top: 1px solid #1A0A03;
+}
+
+.sub-menu__link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #1A0A03;
+  opacity: .6;
+}
+
+.sub-menu__link:hover {
+  opacity: 1;
+  color: #1A0A03;
+}
+
+.menu__link--open ~ .sub-menu {
+  position: relative;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.menu__icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: calc(100vh - 60px);
+  background-color: #1A0A03;
+}
+
+.menu__icon {
+  font-size: 20px;
+  color: #888;
+}
+
+.hamburger__icon {
+  color: #FFF;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.hamburger__icon:hover {
+  color: steelblue;
+}
+/*# sourceMappingURL=main.css.map */
