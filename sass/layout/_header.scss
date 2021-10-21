@@ -1,7 +1,8 @@
 // ************* Header Styles *************
 .main__header {
     padding: 10px;
-    background-color: #eee;
+    background-color: #282A35;
+    border: 1px solid #aaa;
 }
 
 .header__menu {
@@ -21,7 +22,6 @@
     align-items: center;
     align-content: center;
     row-gap: 5px;
-    background-color: $dark-color;
     cursor: pointer;
 }
 
