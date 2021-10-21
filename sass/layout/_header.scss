@@ -1,20 +1,74 @@
-// Header styles
+// ************* Header Styles *************
+.main__header {
+    padding: 10px;
+    background-color: #eee;
+}
 
-.header {
-    padding: 10px 0;
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+// Hamburger Menu Styles
+.hamburger__menu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    row-gap: 5px;
+    background-color: $dark-color;
+    cursor: pointer;
+}
+
+.hamburger__icon {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: $white-color;
+    border-radius: 5px;
+    @extend %transition;
+}
+
+// Hamburger Menu Click Event Styles
+.hamburger__menu--open .hamburger__icon:nth-child(2) {
+    transform: translateX(-30px) scaleX(0);
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.hamburger__menu--open .hamburger__icon:first-child {
+    transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger__menu--open .hamburger__icon:last-child {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+// Search Form Styles
+.search__form {
+    display: flex;
+    align-items: center;
 }
 
 .search__input {
-    width: 400px;
+    width: 300px;
     padding: 5px 10px;
-    border: 1pz solid #aaa;
+    border: 1px solid #aaa;
 
     &:focus {
-        outline: 2px solid turquoise;
+        outline: none;
+        box-shadow: 0 0 1px 1px rgb(34, 202, 202);
     }
 }
 
 .search__btn {
     padding: 5px 10px;
-    border: 1px solid transparent;
+    border: 1px solid #aaa;
+    background-color: teal;
+    color: $white-color;
 }
