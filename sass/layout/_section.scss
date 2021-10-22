@@ -17,5 +17,15 @@
 }
 
 .main__info {
+    height: calc(100vh - 62px);
     border: 1px solid #aaa;
+}
+
+// Footer Styles
+.footer {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #aaa;
+    background-color: $white-color;
+    color: rgba($color: #000000, $alpha: .7);
 }

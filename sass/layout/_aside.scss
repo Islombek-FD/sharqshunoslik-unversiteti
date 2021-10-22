@@ -22,9 +22,25 @@
 .menu__item {
     position: relative;
 
+    &:first-child {
+        height: 62px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 5px 10px;
+        background-color: #497799;
+    }
+
     &:not(:first-child) {
         border-top: 1px solid $dark-color;
     }
+}
+
+.menu__img {
+    border-radius: 50%;
+    margin-right: 10px;
+    object-position: center;
+    object-fit: cover;
 }
 
 .menu__link {
