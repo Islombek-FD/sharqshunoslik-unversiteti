@@ -2,7 +2,6 @@ const elWrapper = document.querySelector('.wrapper');
 const elHamburgerMenu = document.querySelector('.hamburger__menu');
 const elMenu = document.querySelector('.menu');
 
-
 // Listener parent element click event
 elWrapper.addEventListener('click', (evt) => {
     const isHamburgerMenu = evt.target.matches('.hamburger__menu') || evt.target.matches('.hamburger__icon');
